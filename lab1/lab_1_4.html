@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<title>Изображения</title>
@@ -11,7 +12,7 @@
 
 		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
 		<figure>
-        <img src="lab_1_4/aquaria.jpg">
+        <img src="lab_1_4/aquaria.jpg" alt="">
 		<figcaption>че репаха</figcaption>
 		</figure>
 		<h2>Альтернативный текст</h2>
@@ -34,16 +35,13 @@
 		Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы. 
 		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
 		<figure>
-        <img src="lab_1_4/slon.png" width="500px" height="100px">
+        <img src="lab_1_4/slon.png" width="500" height="100" alt="">
 		<figcaption>очень широкий  слон</figcaption>
 		</figure>
 		<figure>
-        <img src="lab_1_4/html5-logo.png" sizes="(max-width: 50px) 25px, (min-width: 10px) 25px">
+        <img src="lab_1_4/html5-logo.png" sizes="(max-width: 50px) 25px, (min-width: 10px) 25px" srcset="lab_1_4/html5-logo.png" alt="">
 		<figcaption>Лого 25 на 25 с макс шириной 100 и минимальной 10</figcaption>
 		</figure>
-     </body>
-    </html>
-
 		<h2>Подпись к изображению</h2>
 		<p>Для группирования любых элементов, например, изображений и подписей к ним используется элемент <code>figure</code>.
 		Он не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться. 
@@ -51,7 +49,7 @@
 		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
 		<p>Пример элемента с подписью</p>
 		<figure>
-			<img src="lab_1_4/redcat.jpg">
+			<img src="lab_1_4/redcat.jpg" alt="">
 			<figcaption>не очень рыжий кот</figcaption>
 		</figure>
 		<h2>Элемент picture</h2>
@@ -65,9 +63,9 @@
 		</p>
 		<picture>
 			<source srcset="lab_1_4/mushroom.jpg" media="(min-width: 600px)"/>
-			<source srcset="lab_1_4/mushroom_portrait.jpg" media="(min-width: 300)"/>
-			<source srcset="lab_1_4/mushroom_retina.jpg"/ media="(min-width: 1200px)">
-			<img src="lab_1_4/mushroom_landscape.jpg">
+			<source srcset="lab_1_4/mushroom_portrait.jpg" media="(min-width: 300px)"/>
+			<source srcset="lab_1_4/mushroom_retina.jpg"/ media="(min-width: 1200px)"/>
+			<img src="lab_1_4/mushroom_landscape.jpg" alt="">
 		</picture>
 	</section>
 </body>
