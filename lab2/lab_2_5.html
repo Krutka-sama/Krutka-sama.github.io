@@ -5,8 +5,64 @@
     <title>Форма</title>
 </head>
 <body>
+<h1>Форма регистрации пользователя</h1>
 <form action="#">
+    <table>
+        <tr>
+            <td><label>E-mail</label></td>
+            <td><input type="email" required placeholder="Введите e-mail"></td>
+        </tr>
+        <tr>
+            <td><label>Пароль</label></td>
+            <td><input type="password" required placeholder="Введите парль"></td>
+        </tr>
+        <tr>
+            <td><label>Пол</label></td>
+            <td>
+                <input type="radio" id="male" name="gender" value="male"><label for="male">Мужчина</label>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Женщина</label></td>
+        </tr>
+        <tr>
+            <td><label>Год рождения</label></td>
+            <td><select id="birth">
+                    <script>
+                        let a = 1940
+                        while(a<2024)
+                        {
+                            document.getElementById('birth').innerHTML += '<option ' + (a === 1981 ? 'selected' : '') + '>' + a + '</option>';
+                            a++
+                        }
+                    </script>
+                </select>
+                <span>-й</span>
+            </td>
+        </tr>
 
+        <tr>
+            <td><label>Я знаю</label></td>
+            <td>
+                <input type="checkbox"><labeL>Русский</label><br>
+                <input type="checkbox"><labeL>Испанский</label><br>
+                <input type="checkbox"><labeL>Немецкий</label><br>
+                <input type="checkbox"><labeL>Английский</label><br>
+                <input type="checkbox"><labeL>Китайский</label><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Обо мне</label></td>
+            <td><textarea cols="30" rows="10" placeholder="Напишите коротко о себе"></textarea></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Готово">
+                <input type="reset" value=" Очистить">
+            </td>
+        </tr>
+
+    </table>
 </form>
 </body>
 </html>
